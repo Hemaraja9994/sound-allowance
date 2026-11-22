@@ -1,0 +1,38 @@
+.theme-src{}
+/* ===== sound-allowance theme ===== */
+:root{
+  --color-paper: #F4F5FB;
+  --color-surface: #FFFFFF;
+  --color-ink: #1B1E4D;
+  --color-muted: #4E5476;
+  --color-line: #D5D8EC;
+  --color-track: #E4E6F5;
+  --color-accent: #4338CA;
+  --color-grid: #E4E6F5;
+  --font-sans: "Figtree","Noto Sans Kannada","Noto Sans Telugu","Noto Sans Devanagari","Atkinson Hyperlegible",system-ui,sans-serif;
+  --font-display: "Sora","Noto Sans Kannada","Noto Sans Telugu","Noto Sans Devanagari","Atkinson Hyperlegible",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+  --color-paper: #0C0D22;
+  --color-surface: #15173A;
+  --color-ink: #E8E9F7;
+  --color-accent: #9A91FF;
+  --color-grid: #1A1C42;
+  --color-muted: #A3B1C2;
+  --color-line: #2B3A4B;
+  --color-track: #22303F;
+  }
+}
+body{
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+h1,h2,h3,h4{ font-family: var(--font-display); }
+header.bg-ink{
+  background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 2px, transparent 2px 13px);
+  background-size: 13px 100%;
+}
+
